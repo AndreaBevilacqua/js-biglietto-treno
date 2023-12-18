@@ -9,3 +9,17 @@ console.log('JS OK')
 6 - Stampare in pagina il prezzo
 */
 
+const countKm = parseFloat(prompt("Quanto chilometri deve percorrere?"));
+const passAge = parseInt(prompt("Quanto anni ha?"));
+
+let prezzoBase = countKm * 0.21;
+
+if (passAge < 18) {
+    prezzoBase -= prezzoBase * 0.2;
+} else if (passAge >= 65) {
+    prezzoBase -= prezzoBase * 0.4;
+}
+
+let prezzoFinale = prezzoBase.toFixed(2);
+
+console.log("Il prezzo del biglietto è di: €" + prezzoFinale);
